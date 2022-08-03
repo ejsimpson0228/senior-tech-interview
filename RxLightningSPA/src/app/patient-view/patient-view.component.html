@@ -1,0 +1,26 @@
+<div class="row">
+    <app-navbar></app-navbar>
+  </div>
+<div class="row mb-4">
+    <a href="/patients/">back</a>
+</div>
+<div class="card" *ngIf="patient">
+    <div class="card-header">
+        <div class="col-md-12">
+            <h3>{{ patient.firstName }} {{ patient.lastName }}</h3>
+        </div>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-md-6 col-xs-12">
+                <p>{{ patient.dateOfBirth }}</p>
+                <p>{{ patient.gender }}</p>
+            </div>
+            <div class="col-md-6 col-xs-12">
+                <p>{{ patient.addressLine1 }}</p>
+                <p>{{ patient.addressLine2 }}</p>
+                <p>{{ patient.city }}, {{ patient.state }} {{ patient.postalCode }}</p>
+            </div>
+        </div>
+    </div>
+</div>
